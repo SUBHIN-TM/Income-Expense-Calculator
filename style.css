@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main-block{
+    width: 100%;
+    height: auto;
+   
+}
+.heading{
+    width: 100%;
+    height: 70px;
+    color: white;
+    background-color: rgb(23, 14, 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:monospace;
+    border-bottom: 1px solid black;
+}
+
+/* PRIMARY BUTTON AREA  START */
+/* FIRST TABLE INCOME AND EXPENSE TYPING AREA */
+.table_container_outline{
+    margin-top: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    justify-content: space-around;
+ 
+}
+
+/* TABLE OPEN BUTTON "INCOME" "EXPENSE */
+.tableButton{
+    width: 250px;
+    height: 70px;
+    margin-left: 200px;
+    margin-bottom: 20px;
+    border-radius: 10%;
+    font-size: x-large;
+    font-family:monospace;
+    background-color: black;
+    color: white;
+}
+
+.tableButton.income{
+    &:hover{
+        color: rgb(132, 230, 132);
+    }
+}
+.tableButton.expense{
+    &:hover{
+        color: rgb(255, 40, 40);
+    }
+}
+/* PRIMARY BUTTON AREA  END HERE */
+
+
+
+/* INSIDE INCOME AND EXPENSE OPEN BUTTON AREA  */
+.incomeButtonOpen{
+    width: 100%;
+    height: 260px;
+    border: 1px solid rgb(14, 13, 13);
+    display: none;
+    background-color: rgb(6, 6, 6);
+    color: white;
+    border-radius: 15px;
+}
+
+.expenseButtonOpen{
+    width: 100%;
+    height: auto;
+    border: 1px solid rgb(16, 15, 15);
+    display: none;
+    background-color: rgb(6, 6, 6);
+    color: white;
+    border-radius: 15px;
+    height: 260px;
+}
+
+
+.buttonfunctions{
+display: flex;
+justify-content: space-between;
+}
+
+#leftClose,#rightClose{
+width: 50px;
+height: 50px;
+&:hover{
+    border-radius: 15px;
+    transform: scale(1.5)
+}
+
+}
+
+/* NOT USED  ADDITIONALLY ADDED TO MAKE CHANGE */
+#incomeAdd,#expenseAdd{
+    width: 38px;
+    height: 37px;
+    margin-top:4px ;
+    margin-left:4px ;
+    visibility: hidden;
+}
+
+/* FORM AREA */
+#amountLable{
+    margin-left: 20px;
+    margin-right: 84px;
+}
+
+
+#descriptionLabel{
+    margin-left: 20px;
+    margin-right: 50px;
+}
+
+
+#incomeDescriptionField,#expenseDescriptionField{
+    width: 300px;
+}
+
+#incomeDescriptionField,#incomeAmountField{
+    color: green;
+    font-weight: 300;
+    font-style: italic;
+
+}
+#expenseDescriptionField,#expenseAmountField{
+    color:red;
+    font-weight: 300;
+    font-style: italic; 
+}
+
+
+#incomeSubmit,#expenseSubmit{
+    padding: 10px;     
+    margin-left : 178px;
+    width: 100px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 400;
+    &:hover{
+        background-color: black;
+        color: white;
+        border: 5px solid  white;
+    }
+}
+
+.table_container_outline small{
+    margin-left: 180px;
+   }
+   
+   
+
+
+
+
+/* BELOW SECTION  */
+.subSection{
+    margin-top: 20px;
+    width: 100%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 920px 1fr;
+   
+    
+
+}
+
+.detailsContainer{
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: space-around
+  
+
+}
+
+
+#incomeTableContainer,#expenseTableContainer{
+    width: 380px;
+    height: 200px;
+    margin-top: 20px;   
+}
+
+#incomeTableContainer{
+    display: none;
+}
+
+#expenseTableContainer{
+    display: none;
+}
+
+
+#incomeTable,th,td {
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+   
+}
+
+#expenseTable,th,td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+}
+
+#Balance{
+    margin-left: 3px;
+    margin-top: 50px;
+}
+
+.detailsContainer h3{
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 10px;
+   }
+
+
+
+/* CHART AREA  */
+#chartContainer{
+    display: none;
+}
+
+#myPieChart{
+    width: 400px;
+    height: 400px;
+}
+
+

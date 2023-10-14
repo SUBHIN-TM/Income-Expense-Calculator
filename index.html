@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Expense Calculator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+
+<body>
+    <div class="main-block">
+        <div class="heading">
+            <h1 id="heading">INCOME EXPENSE CALCULATOR</h1>
+        </div>
+
+        <!-- table outline section  -->
+        <div class="table_container_outline">
+            <!-- left side  -->
+            <div id="tableLeftContainer" class="table_container">
+                <input class="tableButton income" type="button" value="INCOME" onclick="incomeButton()">
+                <div class="incomeButtonOpen">
+                    <div class="buttonfunctions">
+                        <img id="incomeAdd" src="./images/plus-button-png-icon-free-download-716233.png" alt="">
+                        <img id="leftClose" src="./images/close button.png" alt="">
+                    </div>
+
+                    <!-- INCOME ADDING SECTION  -->
+                    <label id="descriptionLabel">DESCRIPTION</label>
+                    <input type="text" name="" id="incomeDescriptionField">
+                    <small id="errorIncomeDescription" style="color: red; display: block;"></small> <br><br>
+                    <label id="amountLable">AMOUNT</label>
+                    <input type="number" name="" id="incomeAmountField">
+                    <small id="errorIncomeAmount" style="color: red; display: block;"></small> <br> <br>
+                    <input id="incomeSubmit" type="submit" value="ADD">
+
+                </div>
+            </div>
+
+            <!-- right side  -->
+            <div id="tableRightContainer" class="table_container">
+                <input class="tableButton expense" type="button" value="EXPENSE" onclick="expenseButton(event)">
+                <div class="expenseButtonOpen">
+                    <div class="buttonfunctions">
+                        <img id="expenseAdd" src="./images/plus-button-png-icon-free-download-716233.png" alt="">
+                        <img id="rightClose" src="./images/close button.png" alt="">
+                    </div>
+                    <!-- EXPENSE ADDING SECTION  -->
+
+                    <label id="descriptionLabel">DESCRIPTION</label>
+                    <input type="text" name="" id="expenseDescriptionField">
+                    <small id="errorExpenseDescription" style="color: red; display: block;"></small> <br><br>
+                    <label id="amountLable">AMOUNT</label>
+                    <input type="number" name="" id="expenseAmountField">
+                    <small id="errorExpenseAmount" style="color: red; display: block;"></small> <br> <br>
+                    <input id="expenseSubmit" type="submit" value="ADD">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MAIN SECTION END HERE  -->
+
+
+    <!-- SUB SECTION WITH DETAILS AND CHART  -->
+    <div class="subSection">
+        <div id="detailsDiv" class="detailsContainer">
+            <div id="incomeTableContainer">
+                <h3>INCOME TABLE</h3>
+                <table id="incomeTable">
+                    <tr>
+                        <th style="width: 10%;">No</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                    </tr>
+
+                </table>
+                <!-- <h2 id="Balance" style="color: blue;"></h2> -->
+            </div>
+
+
+            <div id="expenseTableContainer">
+                <h3>EXPENSE TABLE</h3>
+                <table id="expenseTable">
+                    <tr>
+                        <th style="width: 10%;">No</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                    </tr>
+                </table>
+
+            </div>
+
+        </div>
+
+
+
+
+        <div id="chartContainer">
+            <h2 id="Balance" style="color: black;"></h2>
+            <div class="chartDiv">
+                <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
